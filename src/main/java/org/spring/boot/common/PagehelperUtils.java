@@ -26,7 +26,6 @@ public class PagehelperUtils<T> {
 		page.setNavigateFirstPage(pageInfo.getNavigateFirstPage());
 		page.setNavigateLastPage(pageInfo.getNavigateLastPage());
 		page.setNavigatepageNums(pageInfo.getNavigatepageNums());
-		
 	}
 
 	public List<T> getList() {
