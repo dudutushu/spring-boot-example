@@ -12,10 +12,12 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 @ServletComponentScan
 public class App 
 {
+
     public static void main( String[] args )
     {
 
         SpringApplication.run(App.class, args);
     }
+
 
 }

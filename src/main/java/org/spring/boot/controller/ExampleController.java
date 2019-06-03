@@ -26,7 +26,8 @@ public class ExampleController {
 	public Result<Userproperties> properties() {
 		return ResultUtils.success(userProperties);
 	}
-	
+
+
 	@SuppressWarnings("unchecked")
 	@PostMapping(value = "/valid")
 	public Result<UserReqeust> sayHelloPost(@Valid UserReqeust user, BindingResult bindingResult) {
@@ -40,8 +41,13 @@ public class ExampleController {
 		System.out.println(user.toString());
 		return result;
 	}
+
+
+
 	@PostMapping(value = "/exception/{age}")
 	public Result<Object> sayExceptionPost(@PathVariable("age") int age) {
 		return exampleService.sayExceptionPost(age);
 	}
+
+
 }

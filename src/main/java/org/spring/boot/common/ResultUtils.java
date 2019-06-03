@@ -28,6 +28,7 @@ public class ResultUtils {
 		result.setRetMsg(msg);
 		return result;
 	}
+
 	@SuppressWarnings("rawtypes")
 	public static Result error(ResultEnum resultEnum) {
 		Result result = new Result();
@@ -35,5 +36,5 @@ public class ResultUtils {
 		result.setRetMsg(resultEnum.getMsg());
 		return result;
 	}
-	
+
 }
