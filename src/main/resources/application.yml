@@ -68,10 +68,7 @@ logging:
         boot:
           dao: debug
 
-
 user:
   admin:
     name: hello
     role: admin
-
-    

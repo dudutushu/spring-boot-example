@@ -16,38 +16,36 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ExampleController {
-	
-	@Autowired
-	private Userproperties userProperties;
-	@Autowired
-	private ExampleService exampleService;
-	
-	@GetMapping(value = "/properties")
-	public Result<Userproperties> properties() {
-		return ResultUtils.success(userProperties);
-	}
+
+    @Autowired
+    private Userproperties userProperties;
+    @Autowired
+    private ExampleService exampleService;
+
+    @GetMapping(value = "/properties")
+    public Result<Userproperties> properties() {
+        return ResultUtils.success(userProperties);
+    }
 
 
-	@SuppressWarnings("unchecked")
-	@PostMapping(value = "/valid")
-	public Result<UserReqeust> sayHelloPost(@Valid UserReqeust user, BindingResult bindingResult) {
-		Result<UserReqeust> result = null;
-		if (bindingResult.hasErrors()) {
-			System.out.println(bindingResult.getFieldError().getDefaultMessage());
-			result = ResultUtils.error("0000001", bindingResult.getFieldError().getDefaultMessage());
-			return result;
-		}
-		result = ResultUtils.success(user);
-		System.out.println(user.toString());
-		return result;
-	}
+    @SuppressWarnings("unchecked")
+    @PostMapping(value = "/valid")
+    public Result<UserReqeust> sayHelloPost(@Valid UserReqeust user, BindingResult bindingResult) {
+        Result<UserReqeust> result = null;
+        if (bindingResult.hasErrors()) {
+            System.out.println(bindingResult.getFieldError().getDefaultMessage());
+            result = ResultUtils.error("0000001", bindingResult.getFieldError().getDefaultMessage());
+            return result;
+        }
+        result = ResultUtils.success(user);
+        System.out.println(user.toString());
+        return result;
+    }
 
 
-
-	@PostMapping(value = "/exception/{age}")
-	public Result<Object> sayExceptionPost(@PathVariable("age") int age) {
-		return exampleService.sayExceptionPost(age);
-	}
-
+    @PostMapping(value = "/exception/{age}")
+    public Result<Object> sayExceptionPost(@PathVariable("age") int age) {
+        return exampleService.sayExceptionPost(age);
+    }
 
 }

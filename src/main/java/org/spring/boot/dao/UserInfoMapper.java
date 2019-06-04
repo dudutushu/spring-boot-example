@@ -7,6 +7,7 @@ import org.spring.boot.po.UserInfo;
 import org.spring.boot.po.UserInfoExample;
 @Mapper
 public interface UserInfoMapper {
+
     int countByExample(UserInfoExample example);
 
     int deleteByPrimaryKey(Integer id);
@@ -26,4 +27,5 @@ public interface UserInfoMapper {
     int deleteByUserCode(String userCode);
 
     int deleteByGovCode(String govCode);
+
 }
