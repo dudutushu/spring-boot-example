@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class GsonUtil {
+public class GsonUtils {
 
 
     private static Gson gson = null;
@@ -22,7 +22,7 @@ public class GsonUtil {
     }
 
 
-    public GsonUtil() {
+    public GsonUtils() {
     }
 
     /**

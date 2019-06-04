@@ -28,6 +28,7 @@ public class UserInfoServiceImpl implements IUserInfoService {
 		PageInfo pageInfo = new PageInfo(list); 
 		return new PagehelperUtils(pageInfo);
 	}
+
 	@Transactional
 	@Override
 	public void insert() {

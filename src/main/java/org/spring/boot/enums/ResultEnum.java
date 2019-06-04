@@ -1,6 +1,7 @@
 package org.spring.boot.enums;
 
 public enum ResultEnum {
+
 	UNKNOWN_ERROR("-1", "未知错误"),
 	SCUESS("0", "成功"),
 	PRIMARY_SCHOO("1001","你还在上小学吧"),
@@ -19,10 +20,9 @@ public enum ResultEnum {
 		return code;
 	}
 
+
 	public String getMsg() {
 		return msg;
 	}
-	
-	
 
 }

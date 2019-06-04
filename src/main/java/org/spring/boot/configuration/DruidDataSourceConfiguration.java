@@ -11,6 +11,7 @@ import com.alibaba.druid.pool.DruidDataSource;
 
 @Configuration
 public class DruidDataSourceConfiguration {
+
 	@Bean  
 	@Primary
     @ConfigurationProperties(prefix = "spring.datasource") 
